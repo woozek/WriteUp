@@ -114,7 +114,7 @@ or 이용해서 파일을 한번 봤는데 flag 파일 발견
 
 ##### 계수 입력하면 풀어주는 코드
 
-```
+```{.python}
 from sympy import Symbol, solve, Eq
 
 for i in range(8):
