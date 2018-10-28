@@ -1,4 +1,4 @@
-고등해커 Write_Up (Yung Wave)
+고등해커 Write_Up (Young Wave)
 ============================
 ## Legendary feather
 ----------------------
@@ -61,11 +61,15 @@ contents 테이블에서 group_concat으로 컬럼 이름을 한줄로 묶어서
 
 ![쿠키 확인](./Basic_Login(1).PNG)
 
+----------------------------------
+
 개발자 도구로 username 변수 값 확인
 
 base64 디코딩 해보니 sunrin
 
 ![flag 얻기](./Basic_Login(2).PNG)
+
+-------------------------------
 
 admin을 base64로 인코딩하여 username 변수에 대입
 
@@ -82,6 +86,8 @@ admin을 base64로 인코딩하여 username 변수에 대입
 > >> 리눅스 명령어를 활용해 풀기
 
 ![ls 입력](./nslookup(1).PNG)
+
+-----------------------------
 
 > 아무 값 | ls
 
@@ -136,6 +142,6 @@ while True:
     print(solve(eqn, x))
 ```
 
-![flag 확인](./nslookup(3).PNG)
+![flag 확인](./Easy_Math_Game(3).PNG)
 
 ##### flag : Sunrin{Th1s_1s_B4sic_m4th_g4m3}
