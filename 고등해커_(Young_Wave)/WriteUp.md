@@ -49,7 +49,7 @@ contents 테이블에서 group_concat으로 컬럼 이름을 한줄로 묶어서
 
 이렇게 content에 있는 내용을 전부 합쳐 no 1에 맞춰주고 정렬하여 출력해줬다.
 
-##### flag : Sunrin{Baby_integer_based_sql_injection}
+### flag : Sunrin{Baby_integer_based_sql_injection}
 
 ## Basic login
 --------
@@ -75,7 +75,7 @@ admin을 base64로 인코딩하여 username 변수에 대입
 
 새로고침 -> clear
 
-##### flag : Sunrin{C0okie_f0rgery_1s_e4sy}
+### flag : Sunrin{C0okie_f0rgery_1s_e4sy}
 
 ## nslookup
 --------
@@ -97,7 +97,7 @@ or 이용해서 파일을 한번 봤는데 flag 파일 발견
 
 > 아무 값 | cat flag 파일 이름
 
-##### flag : Sunrin{easy_command_injection_in_the_webapp}
+### flag : Sunrin{easy_command_injection_in_the_webapp}
 
 ## Easy Math Game
 --------
@@ -144,4 +144,4 @@ while True:
 
 ![flag 확인](./Easy_Math_Game(3).PNG)
 
-##### flag : Sunrin{Th1s_1s_B4sic_m4th_g4m3}
+### flag : Sunrin{Th1s_1s_B4sic_m4th_g4m3}
