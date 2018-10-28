@@ -35,7 +35,7 @@
 
 > #### no=3 union select 1,info from information_schema.processlist order by 1
 
-#### 쿼리 출력을 이용하여 컬럼명이 contents
+#### 쿼리 출력을 이용하여 테이블명이 contents
 
 ![컬럼 이름 알아내기](./선린의털(4).PNG)
 
