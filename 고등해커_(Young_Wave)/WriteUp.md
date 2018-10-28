@@ -14,11 +14,11 @@
 ### 문제 풀이
 
 #### and 입력 가능한지 확인
-! [and 입력 시도] (./선린의털(1).PNG)
+![and 입력 시도](./선린의털(1).PNG)
 
 위 사진과 같이 and가 먹히는걸 확인할 수 있다.
 #### 컬럼 개수 알아 내기
-! [컬럼 갯수 알아내기] (./선린의털(2).PNG)
+![컬럼 갯수 알아내기](./선린의털(2).PNG)
 
 위 사진과 같이 order by를 이용하여 컬럼 개수를 알아냈다.
 
@@ -30,20 +30,20 @@
 
 따라서 컬럼 개수는 2개
 
-! [테이블 이름 알아내기] (./선린의털(3).PNG)
+![테이블 이름 알아내기](./선린의털(3).PNG)
 
 > no=3 union select 1,info from information_schema.processlist order by 1
 
 쿼리 출력을 이용하여 컬럼명이 contents
 
-! [컬럼 이름 알아내기] (./선린의털(4).PNG)
+![컬럼 이름 알아내기](./선린의털(4).PNG)
 
 > no=3 union select 1, group_concat(column_name) from information_schema.columns where table_name="contents" order by 1
 
 contents 테이블에서 group_concat으로 컬럼 이름을 한줄로 묶어서 출력 
 (order by로 no을 정렬해줘서 원하는 정보인 컬럼 이름 출력)
 
-! [fleg 알아내기!] (./선린의털(5).PNG)
+![fleg 알아내기!](./선린의털(5).PNG)
 
 > no=3 union select 1, group_concat(content) from contents order by 1
 
@@ -59,13 +59,13 @@ contents 테이블에서 group_concat으로 컬럼 이름을 한줄로 묶어서
 > > username값 확인 (base64 인코딩 되어있음)
 > >> admin (base64로 인코딩)해서 username 값에 넣기
 
-! [쿠키 확인] (./Basic_Login(1).PNG)
+![쿠키 확인](./Basic_Login(1).PNG)
 
 개발자 도구로 username 변수 값 확인
 
 base64 디코딩 해보니 sunrin
 
-! [flag 얻기] (./Basic_Login(2).PNG)
+![flag 얻기](./Basic_Login(2).PNG)
 
 admin을 base64로 인코딩하여 username 변수에 대입
 
@@ -81,13 +81,13 @@ admin을 base64로 인코딩하여 username 변수에 대입
 > > 리눅스 명령어를 활용하여 풀어야 한다는 것을 바로 느낌
 > >> 리눅스 명령어를 활용해 풀기
 
-! [ls 입력] (./nslookup(1).PNG)
+![ls 입력](./nslookup(1).PNG)
 
 > 아무 값 | ls
 
 or 이용해서 파일을 한번 봤는데 flag 파일 발견
 
-! [flag 확인] (./nslookup(2).PNG)
+![flag 확인](./nslookup(2).PNG)
 
 > 아무 값 | cat flag 파일 이름
 
@@ -100,11 +100,11 @@ or 이용해서 파일을 한번 봤는데 flag 파일 발견
 > nc로 접속해보니 일반적인 방정식 문제였다.
 > > 퍼블을 위해 파이썬으로 방정식 풀이 코드 작성하여 문제 풀기
 
-![문제확인] (./Easy_Math_Game(1).PNG)
+![문제확인](./Easy_Math_Game(1).PNG)
 
 위와 같이 문제 확인
 
-![코드 테스트] (./Easy_Math_Game(2).PNG)
+![코드 테스트](./Easy_Math_Game(2).PNG)
 
 ##### 계수 입력하면 풀어주는 코드
 
@@ -136,6 +136,6 @@ while True:
     print(solve(eqn, x))
 ```
 
-! [flag 확인] (./nslookup(3).PNG)
+![flag 확인](./nslookup(3).PNG)
 
 ##### flag : Sunrin{Th1s_1s_B4sic_m4th_g4m3}
