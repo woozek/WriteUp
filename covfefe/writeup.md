@@ -140,7 +140,7 @@ flag2{use_the_source_luke}
 
 성공적으로 쉘이 따졌다.
 
-![flag3](flag3.png)
+![flag3](flag3.PNG)
 
 flag.txt를 열면 flag다
 
