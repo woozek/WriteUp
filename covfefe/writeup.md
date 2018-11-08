@@ -26,7 +26,7 @@ index
 문제 해설
 ---------
 
-! [nmap scan](./nmap.png)
+![nmap scan](./nmap.png)
 
 두 가상 머신은 nat으로 설정했기 때문에 같은 대역이므로 nmap으로 스캔을 해봤다.
 여기서 옵션들을 살펴보면 다음과 같다.
@@ -41,23 +41,23 @@ index
 따라서 위 결과를 보면 192.168.248.136이 covfefe의 ip라는 것을 예측할 수 있다.
 왜냐하면 31337 이라는 해커들이 많이 사용하는 수상한 port가 열려 있기 때문이다.
 
-! [nikto_scan](./nikto_command.png)
+![nikto_scan](./nikto_command.png)
 
 nikto 라는 취약점 분석 도구를 이용하여 192.168.248.136에 31337이라는 포트로 http가 열려있는 것을 확인할 수 있기 때문에 취약점 검사를 진행하여 result.html 이라는 파일로 만들었다.
 
-! [result_html](./result_html.png)
+![result_html](./result_html.png)
 
 이처럼 취약점이 html 파일로 저장되어 시각화된 정보들을 볼 수 있다.
 그래서 하나 하나 의심스러운 경로들을 들어가봤다.
 get 방식으로 되어있기 때문에 url에 경로가 다 보인다.
 
-! [flag 1번](./flag1.png)
+![flag 1번](./flag1.png)
 
 taxes로 이동해보니 첫번째 flag가 나왔다.
 
 flag1{make_america_great_again}
 
-! [ssh_list](./ssh_list.png)
+![ssh_list](./ssh_list.png)
 
 그리고 아까 ssh 접속을 시도해봤는데 접속이 되지않아서 넘겼었는데 .ssh/라는 경로가 있어 들어가보니 파일 3개를 다운 받을 수 있었다.
 
@@ -72,18 +72,18 @@ flag1{make_america_great_again}
 
 그래서 다운을받아 나는 kali에 ~/.ssh로 파일들을 옮겼다.
 
-! [ssh_id](./ssh_id.png)
+![ssh_id](./ssh_id.png)
 
 그리고 is_rsa.pub 파일을 열어봤더니 simon@covfefe라는 문장을 보고 covfefe에 ssh계정 id는 simon 이라는 것을 알게 되었다.
 
 그 후 다음과 같이 ssh로 접속을 해봤다.
 > ssh simon@192.168.248.136
 
-! [access_error](./access_error.png)
+![access_error](./access_error.png)
 
 이렇게 접속을 해보니 다음과 같이 암호를 입력하라고 나와서 막막했다.
 
-! [crack](./crack.png)
+![crack](./crack.png)
 
 그래서 john the ripper라는 툴을 이용하여 ssh 키를 크랙했다.
 
@@ -97,17 +97,17 @@ flag1{make_america_great_again}
 
 simon 비번 : starwars
 
-! [ssh_connact](./ssh_connact.png)
+![ssh_connact](./ssh_connact.png)
 
 위와 같이 성공적으로 접속을 하였다.
 
-! [find](./find.png)
+![find](./find.png)
 
 find 명령어로 setuid 즉, 실행중일 때 그 사용자 권한으로 사용되는 권한이 걸린 파일을 검색해봤다.
 
 위에서 의심스러운 파일인 read_massage라는 파일을 볼 수 있다.
 
-! [read_massage](./read_massage.png)
+![read_massage](./read_massage.png)
 
 그래서 다음 경로로가서 실행해봤다.
 
@@ -115,7 +115,7 @@ find 명령어로 setuid 즉, 실행중일 때 그 사용자 권한으로 사용
 
 home 디렉터리를 보라는데 /root 경로라고 생각할 수 있다.
 
-! [root_dir](./root_dir.png)
+![root_dir](./root_dir.png)
 
 flag.txt와 read_massage.c라는 파일을 볼 수 있다.
 
@@ -134,13 +134,13 @@ flag2{use_the_source_luke}
 
 따라서 배열크기 20을 넘기고 /bin/sh를 넣어주면 excuve에 /bin/sh가 들어갈 것이라는 시나리오를 세우고 해봤다.
 
-! [su](./su.png)
+![su](./su.png)
 
 >Simon + 더미15개 + /bin/sh
 
 성공적으로 쉘이 따졌다.
 
-! [flag3](./flag3.png)
+![flag3](./flag3.png)
 
 flag.txt를 열면 flag다
 

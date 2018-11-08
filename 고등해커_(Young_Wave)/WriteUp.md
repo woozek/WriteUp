@@ -44,7 +44,7 @@
 #### contents 테이블에서 group_concat으로 컬럼 이름을 한줄로 묶어서 출력 
 #### (order by로 no을 정렬해줘서 원하는 정보인 컬럼 이름 출력)
 
-![fleg 알아내기!](./선린의털(5).PNG)
+![flag 알아내기!](./선린의털(5).PNG)
 
 > #### no=3 union select 1, group_concat(content) from contents order by 1
 
@@ -117,7 +117,7 @@
 
 #### 계수 입력하면 풀어주는 코드
 
-```{.python}
+```python
 from sympy import Symbol, solve, Eq
 
 for i in range(8):
